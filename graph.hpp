@@ -50,6 +50,21 @@ class graph {
 
   void remove_vertex(const VertexType &val) {
     // TODO: Implementasikan!
+    if (!_adj_list.empty()) {
+      _adj_list.clear();
+      for(int i= 1; i < _adj_list.size(); ++i){
+        if(_adj_list.empty()) 
+        continue;
+
+        auto it = std::find(_adj_list.begin(),
+                            _adj_list.end(),
+                            val);
+
+        if( it != _adj_list.end()){
+          _adj_list.erase(it);
+        }
+      }
+    }
   }
 
   /**
@@ -60,6 +75,10 @@ class graph {
    */
   void add_edge(const VertexType &val1, const VertexType val2) {
     // TODO: Implementasikan!
+    vector <int> &adj1 = graph._adj_list[val1],
+                 &adj2 = graph._adj_list[val2];
+    auto it = std::find(adj1.begin(), adj1.end(), val1);
+    if (it == _adj_list.end)
   }
 
   /**
