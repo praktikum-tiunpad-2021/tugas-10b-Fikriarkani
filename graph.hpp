@@ -58,7 +58,7 @@ class graph {
     _adj_list.erase(val);
     for (int i = 1; i < _adj_list.size();++i){
       if(_adj_list.find(val)!=_adj_list.end()){
-        _adj_list.erase(val);
+        _adj_list.erase(val); //
       }
     }
   }
